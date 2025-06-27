@@ -1,0 +1,286 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "InterpreterPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "httpx",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "httpx",
+        "description": "httpx",
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "pyperf",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperf",
+        "description": "pyperf",
+        "detail": "pyperf",
+        "documentation": {}
+    },
+    {
+        "label": "concurrent.interpreters",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "concurrent.interpreters",
+        "description": "concurrent.interpreters",
+        "detail": "concurrent.interpreters",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len('bin') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = 'pep734-examples-py3.14' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14t/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len('bin') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = 'pep734-examples-py3.14' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14t/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = 'pep734-examples-py3.14' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14t/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = 'pep734-examples-py3.14' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14t/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = 'pep734-examples-py3.14' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14t/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in '../lib/python3.14t/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "worker_cpu",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def worker_cpu(arg: tuple[int, int]):\n    start, end = arg\n    fact = 1\n    for i in range(start, end + 1):\n        fact *= i\ndef worker_io(arg: tuple[int, int]):\n    start, end = arg\n    with httpx.Client() as client:\n        for i in range(start, end + 1):\n            client.get(f'http://jsonplaceholder.typicode.com/posts/{i}')",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "worker_io",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def worker_io(arg: tuple[int, int]):\n    start, end = arg\n    with httpx.Client() as client:\n        for i in range(start, end + 1):\n            client.get(f'http://jsonplaceholder.typicode.com/posts/{i}')\n# For CPU:\n# worker = worker_cpu\n# WORKLOADS = [(1, 10000), (10001, 20000), (20001, 30000), (30001, 40000)]\n# For IO:\nworker = worker_io",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "bench_regular",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def bench_regular():\n    for work in WORKLOADS:\n        worker(work)\ndef bench_threading():\n    with ThreadPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_multiprocessing():\n    with ProcessPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_subinterpreters():",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "bench_threading",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def bench_threading():\n    with ThreadPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_multiprocessing():\n    with ProcessPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_subinterpreters():\n    with InterpreterPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef main():",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "bench_multiprocessing",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def bench_multiprocessing():\n    with ProcessPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_subinterpreters():\n    with InterpreterPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef main():\n    runner = pyperf.Runner()\n    runner.bench_func('Regular', bench_regular)\n    runner.bench_func('Threading', bench_threading)",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "bench_subinterpreters",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def bench_subinterpreters():\n    with InterpreterPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef main():\n    runner = pyperf.Runner()\n    runner.bench_func('Regular', bench_regular)\n    runner.bench_func('Threading', bench_threading)\n    runner.bench_func('Multiprocessing', bench_multiprocessing)\n    runner.bench_func('Subinterpreters', bench_subinterpreters)\nif __name__ == '__main__':",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "def main():\n    runner = pyperf.Runner()\n    runner.bench_func('Regular', bench_regular)\n    runner.bench_func('Threading', bench_threading)\n    runner.bench_func('Multiprocessing', bench_multiprocessing)\n    runner.bench_func('Subinterpreters', bench_subinterpreters)\nif __name__ == '__main__':\n    main()",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "worker",
+        "kind": 5,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "worker = worker_io\nWORKLOADS = [(1, 5), (6, 10), (11, 15), (16, 20)]\nCPUS = os.cpu_count() or len(WORKLOADS)\ndef bench_regular():\n    for work in WORKLOADS:\n        worker(work)\ndef bench_threading():\n    with ThreadPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_multiprocessing():",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "WORKLOADS",
+        "kind": 5,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "WORKLOADS = [(1, 5), (6, 10), (11, 15), (16, 20)]\nCPUS = os.cpu_count() or len(WORKLOADS)\ndef bench_regular():\n    for work in WORKLOADS:\n        worker(work)\ndef bench_threading():\n    with ThreadPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_multiprocessing():\n    with ProcessPoolExecutor(CPUS) as executor:",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "CPUS",
+        "kind": 5,
+        "importPath": "examples.benchmark",
+        "description": "examples.benchmark",
+        "peekOfCode": "CPUS = os.cpu_count() or len(WORKLOADS)\ndef bench_regular():\n    for work in WORKLOADS:\n        worker(work)\ndef bench_threading():\n    with ThreadPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))\ndef bench_multiprocessing():\n    with ProcessPoolExecutor(CPUS) as executor:\n        list(executor.map(worker, WORKLOADS))",
+        "detail": "examples.benchmark",
+        "documentation": {}
+    },
+    {
+        "label": "interp",
+        "kind": 5,
+        "importPath": "examples.simple",
+        "description": "examples.simple",
+        "peekOfCode": "interp = interpreters.create()\na = 15\nprint(f\"A in main: {a}\")\ntry:\n    interp.exec('print(\"Hello from PEP-734\")\\na = 10\\nprint(f\"A in subinterp: {a}\")')\nfinally:\n    interp.close()",
+        "detail": "examples.simple",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "examples.simple",
+        "description": "examples.simple",
+        "peekOfCode": "a = 15\nprint(f\"A in main: {a}\")\ntry:\n    interp.exec('print(\"Hello from PEP-734\")\\na = 10\\nprint(f\"A in subinterp: {a}\")')\nfinally:\n    interp.close()",
+        "detail": "examples.simple",
+        "documentation": {}
+    }
+]
