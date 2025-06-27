@@ -25,7 +25,7 @@ def worker_io(arg: tuple[int, int]):
     start, end = arg
     with httpx.Client() as client:
         for i in range(start, end + 1):
-            client.get(f'http://jsonplaceholder.typicode.com/posts/{i}')
+            client.get(f"http://jsonplaceholder.typicode.com/posts/{i}")
 
 
 # For CPU:
@@ -36,6 +36,7 @@ worker = worker_io
 WORKLOADS = [(1, 5), (6, 10), (11, 15), (16, 20)]
 
 CPUS = os.cpu_count() or len(WORKLOADS)
+
 
 def bench_regular():
     for work in WORKLOADS:
@@ -59,10 +60,11 @@ def bench_subinterpreters():
 
 def main():
     runner = pyperf.Runner()
-    runner.bench_func('Regular', bench_regular)
-    runner.bench_func('Threading', bench_threading)
-    runner.bench_func('Multiprocessing', bench_multiprocessing)
-    runner.bench_func('Subinterpreters', bench_subinterpreters)
+    runner.bench_func("Regular", bench_regular)
+    runner.bench_func("Threading", bench_threading)
+    runner.bench_func("Multiprocessing", bench_multiprocessing)
+    runner.bench_func("Subinterpreters", bench_subinterpreters)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
