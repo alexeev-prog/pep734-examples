@@ -4,6 +4,7 @@
 # since NoGIL is not zero-cost.
 
 import os
+from datetime import datetime
 from concurrent.futures import (
     ProcessPoolExecutor,
     ThreadPoolExecutor,
@@ -12,6 +13,10 @@ from concurrent.futures import (
 
 import httpx
 import pyperf
+
+
+def get_date_as_string(date: datetime = datetime.now()) -> str:
+    return datetime.strftime(date, "%H:%M:%S")
 
 
 def worker_cpu(arg: tuple[int, int]):
@@ -29,11 +34,11 @@ def worker_io(arg: tuple[int, int]):
 
 
 # For CPU:
-# worker = worker_cpu
-# WORKLOADS = [(1, 10000), (10001, 20000), (20001, 30000), (30001, 40000)]
+worker = worker_cpu
+WORKLOADS = [(1, 10000), (10001, 20000), (20001, 30000), (30001, 40000)]
 # For IO:
-worker = worker_io
-WORKLOADS = [(1, 5), (6, 10), (11, 15), (16, 20)]
+# worker = worker_io
+# WORKLOADS = [(1, 5), (6, 10), (11, 15), (16, 20)]
 
 CPUS = os.cpu_count() or len(WORKLOADS)
 
@@ -55,7 +60,7 @@ def bench_multiprocessing():
 
 def bench_subinterpreters():
     with InterpreterPoolExecutor(CPUS) as executor:
-        list(executor.map(worker, WORKLOADS))
+        list(executor.map(worker_cpu, WORKLOADS))
 
 
 def main():
