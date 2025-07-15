@@ -1,3 +1,15 @@
+commit 8f6546359b72a742c045b07fcda12e488f07a297
+Author: Alexeev Bronislav <alexeev.dev@mail.ru>
+Date:   Sat Jul 12 21:40:01 2025 +0700
+
+    update article
+
+commit da413527da8b0167ab00eae0b0f2e867e403deb9
+Author: Alexeev Bronislav <alexeev.dev@mail.ru>
+Date:   Fri Jun 27 18:12:13 2025 +0700
+
+    add basic usage example and fix benchmark
+
 commit 36d6e5ea2f7ac62aa1d6002beaaa78d9e6e888a3
 Author: Alexeev Bronislav <alexeev.dev@mail.ru>
 Date:   Fri Jun 27 15:45:04 2025 +0700
