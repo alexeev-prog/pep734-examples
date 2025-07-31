@@ -11,12 +11,16 @@ interp.exec("""if True:
     print('spam!')
     """)
 
-interp.exec(dedent("""
+interp.exec(
+    dedent("""
     print('spam!')
-    """))
+    """)
+)
+
 
 def run():
-    print('spam!')
+    print("spam!")
+
 
 interp.call(run)
 
