@@ -7,14 +7,18 @@ interp = interpreters.create()
 
 interp.exec('print("spam!")')
 
-interp.exec("""if True:
+interp.exec(
+    """if True:
     print('spam!')
-    """)
+    """
+)
 
 interp.exec(
-    dedent("""
+    dedent(
+        """
     print('spam!')
-    """)
+    """
+    )
 )
 
 

@@ -4,12 +4,12 @@
 # since NoGIL is not zero-cost.
 
 import os
-from datetime import datetime
 from concurrent.futures import (
+    InterpreterPoolExecutor,
     ProcessPoolExecutor,
     ThreadPoolExecutor,
-    InterpreterPoolExecutor,
 )
+from datetime import datetime
 
 import httpx
 import pyperf
